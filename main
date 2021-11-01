@@ -1,0 +1,13 @@
+import pandas as pd
+from binance import Client, ThreadedWebsocketManager, ThreadedDepthCacheManager
+from binance_keys import  API_key, Secret_Key
+from datetime import datetime
+import time
+import plotly.graph_objects as go
+
+Client = Client(API_key, Secret_Key)
+from API_Data import coin_data
+
+#test
+start_str = 'Oct 1 2021'
+a = coin_data (coin='ETH' ,Interval= '1w', start_str=start_str, pair='BTC')
